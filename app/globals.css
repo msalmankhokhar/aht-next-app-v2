@@ -1,26 +1,84 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Colors */
+  --color-brand-primary-50: #FDF7E4;
+  --color-brand-primary-100: #FBEFC9;
+  --color-brand-primary-200: #F7DF94;
+  --color-brand-primary-300: #F3CF5E;
+  --color-brand-primary-400: #EFBF29;
+  --color-brand-primary: #D4A10F;
+  --color-brand-primary-600: #A97D0C;
+  --color-brand-primary-700: #7F5E09;
+  --color-brand-primary-800: #543E06;
+  --color-brand-primary-900: #2A1F03;
+  /* --- */
+  --color-brand-secondary-50: #E6ECEC;
+  --color-brand-secondary-100: #CCD9DA;
+  --color-brand-secondary-200: #99B3B5;
+  --color-brand-secondary-300: #668D90;
+  --color-brand-secondary-400: #33676B;
+  --color-brand-secondary: #00454A;
+  --color-brand-secondary-600: #00373B;
+  --color-brand-secondary-700: #00292C;
+  --color-brand-secondary-800: #001B1E;
+  --color-brand-secondary-900: #000D0F;
+
+  --gradient-brand-teal: @apply bg-gradient-to-b from-brand-secondary-900 via-brand-secondary-600 to-transparent;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Utilities */
+
+@utility max-w-cont {
+  @apply min-[1440px]:max-w-[1400px] mx-auto min-[1440px]:px-0
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@utility px-cont {
+  @apply px-4 sm:px-6 md:px-8 lg:px-12;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@utility gradient-brand-teal-header {
+  @apply bg-gradient-to-b from-brand-secondary-900 via-brand-secondary-600 to-transparent;
+}
+
+@utility gradient-brand-teal {
+  @apply bg-gradient-to-b from-brand-secondary-900 via-brand-secondary-600 to-brand-secondary;
+}
+
+/* Bg Styles for Buttons and Text */
+@utility text-bg-mixed-primary {
+  @apply bg-brand-primary text-brand-secondary-600
+}
+@utility text-bg-mixed-secondary {
+  @apply bg-brand-secondary text-brand-primary-300
+}
+
+/* Buttons */
+@utility btn {
+  @apply py-3 px-6 font-bold rounded-sm transition-colors flex items-center justify-center
+}
+@utility btn-primary {
+  @apply btn bg-brand-primary hover:bg-brand-primary-400 text-black
+}
+@utility btn-secondary {
+  @apply btn bg-brand-secondary hover:bg-brand-secondary-600 text-white
+}
+@utility btn-primary-white {
+  @apply btn bg-white text-brand-primary-600/90
+}
+@utility btn-secondary-white {
+  @apply btn bg-white text-brand-secondary
+}
+@utility btn-primary-mixed {
+  @apply btn text-bg-mixed-primary hover:bg-brand-primary-400
+}
+@utility btn-secondary-mixed {
+  @apply btn text-bg-mixed-secondary hover:bg-brand-secondary-600
+}
+
+.pkgcard .imgHolder {
+  aspect-ratio: 10/7;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
