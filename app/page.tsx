@@ -1,4 +1,3 @@
-"use client";
 import Arrow from "@/components/Arrow";
 import BgPattern from "@/components/BgPattern";
 import BookingProcessItem from "@/components/BookingProcessItem";
@@ -10,12 +9,16 @@ import QuoteForm from "@/components/QuoteForm";
 import StatsSection from "@/components/sections/StatsSection";
 import Topbar from "@/components/Topbar";
 import WhatsIncludedCard from "@/components/WhatsIncludedCard";
-import { Metadata } from "next";
+import Head from "next/head";
 import { LuBed, LuBus, LuIdCard } from "react-icons/lu";
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Best Umrah Package 2025 - Umrah Travel Agency</title>
+        <meta name="description" content="Book Your Umrah Package in UK with AL Habib Travel,  We have all inclusive packages for you next umrah journey. We brings exclusive Umrah deals including flights, hotels, visa etc." />
+      </Head>
       <header className="max-w-cont relative bg-gradient-to-b from-brand-secondary-900 via-brand-secondary-800 to-transparent overflow-hidden">
         <video src="/videos/header-video.mp4" autoPlay loop muted className="z-[0] opacity-10 absolute top-0 left-0 w-full h-full object-cover"></video>
         <Topbar />
@@ -176,8 +179,3 @@ export default function Home() {
     </>
   );
 }
-
-export const metadata: Metadata = {
-  title: "Best Umrah Package 2025 - Umrah Travel Agency",
-  description: "Book Your Umrah Package in UK with AL Habib Travel,  We have all inclusive packages for you next umrah journey. We brings exclusive Umrah deals including flights, hotels, visa etc.",
-};
