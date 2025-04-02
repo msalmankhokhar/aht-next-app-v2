@@ -27,7 +27,7 @@ export default function Navbar({ variant = 'navbar-white' }: NavbarProps) {
       <Logo variant={logoVariant} foreGround={logoForeground} />
 
       {/* Desktop Navigation */}
-      <div className="hidden lg:flex items-center gap-8">
+      <div className="hidden items-center gap-8">
         <Link href="#" className={`${textColorClass} font-semibold ${hoverClass}`}>Home</Link>
         <div className="relative group">
           <button className={`${textColorClass} font-semibold ${hoverClass} flex items-center gap-1`}>
@@ -49,7 +49,7 @@ export default function Navbar({ variant = 'navbar-white' }: NavbarProps) {
       </div>
       
       {/* Mobile menu button */}
-      <div className="flex lg:hidden items-center gap-4">
+      <div className="hidden items-center gap-4">
         <button onClick={() => setSearchOpen(!searchOpen)} className="p-2" aria-label="Search">
           <Search size={20} className={textColorClass} />
         </button>
@@ -60,7 +60,7 @@ export default function Navbar({ variant = 'navbar-white' }: NavbarProps) {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className={`lg:hidden absolute top-full left-0 right-0 ${mobileMenuBgClass} shadow-lg z-30 px-cont py-4`}>
+        <div className={`hidden absolute top-full left-0 right-0 ${mobileMenuBgClass} shadow-lg z-30 px-cont py-4`}>
           <div className="flex flex-col space-y-3">
             <Link href="#" className={`${mobileMenuTextClass} font-semibold py-2 border-b ${mobileMenuBorderClass}`}>Home</Link>
             <div>

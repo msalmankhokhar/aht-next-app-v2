@@ -1,92 +1,63 @@
-import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
-import Image from "next/image";
 import Link from "next/link";
 import BgPattern from "./BgPattern";
 
 export default function Footer() {
     return (
         <>
-            <footer className="bg-brand-secondary-700 relative flex flex-col">
+            <footer className="bg-brand-secondary relative flex flex-col px-cont">
                 <BgPattern />
-                <div className="flex flex-col gap-5 px-5 pt-16 pb-5 md:flex-row md:justify-evenly flex-wrap">
-
-                    <div className="flex flex-col gap-5">
-                        <h1 className="text-bold font-medium text-white text-base">About us</h1>
-                        <p className="text-sm font-light max-w-sm text-white">
-                            Al Habib Travel is the most trusted & reliable agency among UK Muslims. We provide bespoke Umrah travel solutions & package designing services to meet budget range and facilities requirements of pilgrims.
-                        </p>
-                        <div className="flex flex-col gap-2">
-                            <Image src={'/images/footer/paymentmethods.png'} width={200} height={30} alt="payment methods logos" />
-                            <Image src={'/images/footer/ministryofhajj.png'} width={200} height={30} alt="payment methods logos" />
-                        </div>
+                <div className="flex items-center justify-between pt-8 pb-5 border-b border-brand-secondary-300">
+                    <div className="font-semibold text-white text-3xl">Let&apos;s <span className="text-brand-primary-400">Connect</span> there</div>
+                    <button className="btn-primary-mixed">Call Now</button>
+                </div>
+                <div className="flex justify-between py-6">
+                    <div>
+                        <h2 className="text-brand-primary-400 font-semibold text-lg mb-2">About Us</h2>
+                        <p className="text-white tracking-wider max-w-[250px] text-sm">Al Habib Travel is the most trusted & reliable agency among UK Muslims. We provide bespoke Umrah travel solutions & package designing services to meet budget range and facilities requirements of pilgrims.</p>
                     </div>
-                    <div className="flex flex-col gap-5">
-                        <h1 className="text-bold font-medium text-white text-base">Travel</h1>
-                        <ul className="flex flex-col gap-1">
-                            <li className="leading-none"><Link className="text-sm font-light text-white" href={'/'}>Home</Link></li>
-                            <li className="leading-none"><Link className="text-sm font-light text-white" href={'/#pkg-listing-section'}>Umrah Packages</Link></li>
-                            <li className="leading-none"><Link className="text-sm font-light text-white" href={'/ramadam-umrah-packages'}>Ramadan Umrah Packages</Link></li>
-                            <li className="leading-none"><Link className="text-sm font-light text-white" href={'/contact'}>Contact</Link></li>
-                            <li className="leading-none"><Link className="text-sm font-light text-white" href={'/about'}>About us</Link></li>
+                    <div>
+                        <h2 className="text-brand-primary-400 font-semibold text-lg mb-2">Travel</h2>
+                        <ul className="flex flex-col">
+                            <li><Link className="text-white text-sm" href={'#'}>Home</Link></li>
+                            <li><Link className="text-white text-sm" href={'#'}>Umrah Packages</Link></li>
+                            <li><Link className="text-white text-sm" href={'#'}>Ramadan Umrah Packages</Link></li>
+                            <li><Link className="text-white text-sm" href={'#'}>Contact Us</Link></li>
+                            <li><Link className="text-white text-sm" href={'#'}>About Us</Link></li>
                         </ul>
                     </div>
-                    <div className="flex flex-col gap-5">
-                        <h1 className="text-bold font-medium text-white text-base">Our Terms</h1>
-                        <ul className="flex flex-col gap-1">
-                            <li className="leading-none"><Link className="text-sm font-light text-white" href={'#'}>Travel Insurance</Link></li>
-                            <li className="leading-none"><Link className="text-sm font-light text-white" href={'#'}>Terms and Conditions</Link></li>
-                            <li className="leading-none"><Link className="text-sm font-light text-white" href={'#'}>Safi Assurance</Link></li>
-                            <li className="leading-none"><Link className="text-sm font-light text-white" href={'/privacy-policy'}>Privacy Policy Statement</Link></li>
-                            <li className="leading-none"><Link className="text-sm font-light text-white" href={'#'}>Payment Security</Link></li>
-                            <li className="leading-none"><Link className="text-sm font-light text-white" href={'#'}>Our Responsibility</Link></li>
-                            <li className="leading-none"><Link className="text-sm font-light text-white" href={'#'}>Download</Link></li>
+                    <div>
+                        <h2 className="text-brand-primary-400 font-semibold text-lg mb-2">Our Terms</h2>
+                        <ul className="flex flex-col">
+                            <li><Link className="text-white text-sm" href={'#'}>Travel Insurance</Link></li>
+                            <li><Link className="text-white text-sm" href={'#'}>Terms and Conditions</Link></li>
+                            <li><Link className="text-white text-sm" href={'#'}>Safi Assurance</Link></li>
+                            <li><Link className="text-white text-sm" href={'#'}>Privacy Policy</Link></li>
+                            <li><Link className="text-white text-sm" href={'#'}>Payment Security</Link></li>
+                            <li><Link className="text-white text-sm" href={'#'}>Our Responsibility</Link></li>
+                            <li><Link className="text-white text-sm" href={'#'}>Download</Link></li>
                         </ul>
                     </div>
-                    <div className="flex flex-col gap-5">
-                        <div className="flex flex-col gap-5">
-                            <h1 className="text-bold font-medium text-white text-base">Contact info</h1>
-                            <div className="flex flex-col gap-2">
-                                <Link className="text-sm font-medium text-white" href={'tel:0203 504 2344'}>0203 504 2344</Link>
-                                <Link className="text-sm font-medium text-white" href={'mail:info@alhabibtravel.co.uk'}>info@alhabibtravel.co.uk</Link>
-                            </div>
+                    <div className="flex flex-col gap-2">
+                        <div>
+                            <h2 className="text-brand-primary-400 font-semibold text-lg mb-2">Contact Us</h2>
+                            <p className="text-sm tracking-wider font-semibold mb-1 text-white">0203 504 2344</p>
+                            <p className="text-sm tracking-wider text-white">info@alhabibtravel.com</p>
                         </div>
-                        <div className="flex flex-col gap-5">
-                            <h1 className="text-bold font-medium text-white text-base">Office</h1>
-                            <p className="text-sm text-wrap w-fit max-w-sm inline text-white">
-                                Office 10378 182-184 High Street <br /> North East Ham London <br /> England E6 2JA
+                        <div>
+                            <h2 className="text-brand-primary-400 font-semibold text-lg mb-2">Office</h2>
+                            <p className="text-sm tracking-wider max-w-[220px] text-white">
+                                Office 10378 182-184 High Street
+                                North East Ham London
+                                England E6 2JA
                             </p>
                         </div>
                     </div>
                 </div>
-
-                <div className="flex md:items-center flex-col gap-5 p-5">
-                    <Image src={'/images/logos/png/logo-footer.png'} width={190} height={172} alt="alhabibtravel logo" />
-                    <p className="text-sm max-w-screen-md text-white md:text-center">
-                        <strong>Note:</strong> <span className="font-light">All fares advertised are subject to availability and start from the prices we have mentioned. Fares are only guaranteed until ticketed. Offers may be withdrawn without any prior notice</span>
-                    </p>
-                </div>
-                <div className="flex border-t flex-col sm:flex-row sm:items-center sm:justify-between gap-5 p-5">
-                    <div className="flex gap-4 items-center">
-                        <a target="_blank" href="#" className="flex items-center justify-center h-8 w-8 rounded-full bg-slate-100 text-teal-700 hover:text-gray-200 hover:bg-teal-800 transition-colors duration-300">
-                            <FaFacebook size={18} className="leading-none text-sm" />
-                        </a>
-                        <a href="#" className="flex items-center justify-center h-8 w-8 rounded-full bg-slate-100 text-teal-700 hover:text-gray-200 hover:bg-teal-800 transition-colors duration-300">
-                            <FaInstagram size={18} className="leading-none text-sm" />
-                        </a>
-                        <a href="https://www.youtube.com/@alhabibtraveluk" className="flex items-center justify-center h-8 w-8 rounded-full bg-slate-100 text-teal-700 hover:text-gray-200 hover:bg-teal-800 transition-colors duration-300">
-                            <FaYoutube size={18} className="leading-none text-sm" />
-                        </a>
-                    </div>
-                    <div className="text-white text-sm">
-                        Copyright &copy; 2024 | Al Habib Travel Ltd.
-                    </div>
-                </div>
-                <div className="bg-white px-4 py-4">
-                    <p className="text-xs font-light">
-                        Most/Many of the flight-inclusive holidays on this website are financially protected by the ATOL scheme. When you pay you will be supplied with an ATOL Certificate. Please ask for it and check to ensure that everything you booked (flights, hotels and other services) is listed on it. If you do receive an ATOL Certificate but all the parts of your trip are not listed on it, those parts will not be ATOL protected. Some of the flights on this website are also financially protected by the ATOL scheme, but ATOL protection does not apply to all flights.
-                    </p>
-                </div>
+                <p className="text-center text-sm py-5 text-brand-secondary-100 border-t border-brand-secondary-300">Copyright © 2025 | Al Habib Travel Ltd.</p>
             </footer>
+            <div className="bg-white text-xs font-light text-center px-cont py-3">
+                Most/Many of the flight-inclusive holidays on this website are financially protected by the ATOL scheme. When you pay you will be supplied with an ATOL Certificate. Please ask for it and check to ensure that everything you booked (flights, hotels and other services) is listed on it. If you do receive an ATOL Certificate but all the parts of your trip are not listed on it, those parts will not be ATOL protected. Some of the flights on this website are also financially protected by the ATOL scheme, but ATOL protection does not apply to all flights.
+            </div>
         </>
     )
 }

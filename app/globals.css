@@ -55,7 +55,7 @@
 
 /* Buttons */
 @utility btn {
-  @apply py-3 px-6 font-bold rounded-sm transition-colors flex items-center justify-center
+  @apply py-3 px-6 font-bold rounded-sm transition-colors flex items-center justify-center cursor-pointer
 }
 @utility btn-primary {
   @apply btn bg-brand-primary hover:bg-brand-primary-400 text-black
@@ -67,18 +67,11 @@
   @apply btn bg-white text-brand-primary-600/90
 }
 @utility btn-secondary-white {
-  @apply btn bg-white text-brand-secondary
+  @apply btn bg-white text-brand-secondary hover:bg-brand-secondary hover:text-white
 }
 @utility btn-primary-mixed {
   @apply btn text-bg-mixed-primary hover:bg-brand-primary-400
 }
 @utility btn-secondary-mixed {
   @apply btn text-bg-mixed-secondary hover:bg-brand-secondary-600
-}
-
-.pkgcard .imgHolder {
-  aspect-ratio: 10/7;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }

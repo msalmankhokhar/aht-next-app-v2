@@ -1,6 +1,7 @@
 import Arrow from "@/components/Arrow";
 import BgPattern from "@/components/BgPattern";
 import BookingProcessItem from "@/components/BookingProcessItem";
+import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 import HotelCard from "@/components/HotelCard";
 import Navbar from "@/components/Navbar";
@@ -10,7 +11,7 @@ import StatsSection from "@/components/sections/StatsSection";
 import Topbar from "@/components/Topbar";
 import WhatsIncludedCard from "@/components/WhatsIncludedCard";
 import Head from "next/head";
-import { LuBed, LuBus, LuIdCard } from "react-icons/lu";
+import { LuBed, LuBus, LuIdCard, LuPhone } from "react-icons/lu";
 
 export default function Home() {
   return (
@@ -113,7 +114,7 @@ export default function Home() {
         <section className="px-cont py-20">
           <h1 className="text-2xl sm:text-4xl font-medium text-center text-brand-secondary">Our <span className="py-2 bg-gradient-to-r from-transparent via-brand-primary/20 to-transparent">Booking Process</span></h1>
           {/* Section Content */}
-          <div className="flex flex-wrap gap-3 w-full items-center justify-center mt-16">
+          <div className="flex flex-wrap gap-5 w-full items-center justify-center mt-16">
 
             <BookingProcessItem
               title="Booking Confirmation"
@@ -163,7 +164,7 @@ export default function Home() {
           <BgPattern />
           <h1 className="text-2xl sm:text-4xl font-medium text-center text-white">Popular <span className="py-2 bg-gradient-to-r from-transparent via-brand-secondary to-transparent">Umrah Packages</span></h1>
           {/* section content */}
-          <div className="flex flex-wrap items-center justify-center gap-5 mt-10">
+          <div className="flex flex-wrap items-center relative z-[1] justify-center gap-8 mt-10">
             <PackageCard />
             <PackageCard />
             <PackageCard />
@@ -173,6 +174,33 @@ export default function Home() {
 
         <StatsSection />
       </main>
+
+      {/* FAQs Section */}
+      <section className="px-cont py-20">
+        <h1 className="text-2xl sm:text-4xl font-medium text-center text-brand-secondary mb-16">Frequently Asked <span className="py-2 bg-gradient-to-r from-transparent via-brand-primary/20 to-transparent">Questions</span></h1>
+        {/* Section Content */}
+        <div className="flex gap-5">
+          <div className="self-start border-l border-r border-b border-gray-300">
+            <Faq />
+            <Faq />
+            <Faq />
+            <Faq />
+            <Faq />
+          </div>
+          <div className="self-start w-full p-5 rounded-xl bg-brand-secondary-400 flex flex-col gap-5 items-center">
+            <div className="size-[65px] rounded-full bg-white flex items-center justify-center">
+              <LuPhone size={24} className="text-brand-secondary-400" />
+            </div>
+            <h1 className="text-center font-bold text-white text-2xl">Have a different question?</h1>
+            <div className="h-[5px] rounded max-w-[100px] w-full bg-brand-primary-400"></div>
+            <p className="text-white max-w-[300px] text-center">
+              Our team will answer all your questions.
+              We ensure a quick response.
+            </p>
+            <button className="btn-secondary-white w-full">Call Now</button>
+          </div>
+        </div>
+      </section>
 
       <Footer />
 
