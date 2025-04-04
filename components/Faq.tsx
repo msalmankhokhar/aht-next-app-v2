@@ -1,7 +1,7 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { FaQuestionCircle } from "react-icons/fa";
+import { LuMessageCircleQuestion } from "react-icons/lu";
 
 interface FaqProps {
     question?: string;
@@ -22,7 +22,7 @@ export default function Faq({
                 className="cursor-pointer w-full p-6 flex items-center justify-between text-left"
             >
                 <div className="flex items-center gap-3">
-                    <FaQuestionCircle className="text-brand-secondary text-xl" />
+                    <LuMessageCircleQuestion className="text-brand-secondary text-xl" />
                     <h3 className="text-nowrap font-medium text-brand-secondary">{question}</h3>
                     <motion.div
                         animate={{ rotate: isOpen ? 180 : 0 }}

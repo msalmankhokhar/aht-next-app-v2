@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function PackageCard() {
     return (
-        <div className="bg-white overflow-hidden rounded-xl flex border-gray-300 max-w-[580px]">
+        <div className="bg-white overflow-hidden rounded-xl flex border border-gray-300 max-w-[580px]">
             <div className='p-3'>
                 <div className="rounded-lg overflow-hidden relative h-full w-full min-w-[200px] max-w-[200px] aspect-[10/13.2]">
                     <Image
