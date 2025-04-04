@@ -50,7 +50,7 @@ export default function Home() {
         {/* Whats Included Section */}
         <section className="px-cont py-24">
           <h1 className="text-2xl mb-16 sm:text-4xl font-medium text-center text-brand-secondary">What&apos;s included in your <span className="py-2 bg-gradient-to-r from-transparent via-brand-primary-100 to-transparent">Umrah Package</span> ?</h1>
-          <div className="grid grid-cols-4 gap-5 mt-7">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-7 mt-7">
             <WhatsIncludedCard />
             <WhatsIncludedCard
               title="Visa Processing"
@@ -162,8 +162,8 @@ export default function Home() {
               </p>
             </li>
             <li>
-              <h2>Delicious Halal Meals</h2>
-              <p>
+              <h2 className="inline">Delicious Halal Meals - </h2>
+              <p className="inline">
                 Nutritious and halal meal options are provided according to the dietary needs of UK pilgrims. You will enjoy the delicious food provided by the hotel, and we will also take you to some of the best restaurants so you can savour the finest cuisine.
               </p>
             </li>

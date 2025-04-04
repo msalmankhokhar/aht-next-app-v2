@@ -88,11 +88,11 @@
   }
 
   h1 {
-    @apply text-3xl font-semibold mb-6;
+    @apply text-3xl font-semibold mb-5;
   }
 
   h2 {
-    @apply text-2xl font-semibold mb-5;
+    @apply text-2xl font-semibold mb-4;
   }
 
   h3 {
