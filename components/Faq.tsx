@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { LuMessageCircleQuestion } from "react-icons/lu";
 
-interface FaqProps {
+export interface FaqProps {
     question?: string;
     answer?: string;
 }
@@ -42,8 +42,7 @@ export default function Faq({
                         transition={{ duration: 0.2 }}
                         className="overflow-hidden"
                     >
-                        <p className="px-6 py-6 text-sm text-gray-600 border-t border-gray-300">
-                            {answer}
+                        <p dangerouslySetInnerHTML={{__html: answer}} className="px-6 py-6 text-sm text-gray-600 border-t border-gray-300">
                         </p>
                     </motion.div>
                 )}

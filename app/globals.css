@@ -79,6 +79,9 @@
 /* SEO text block */
 @utility text-block {
   @apply space-y-8 max-w-[1000px] border-t border-b max-w-cont px-cont py-10;
+  div {
+    @apply space-y-8;
+  }
   p {
     @apply text-base leading-7;
   }
