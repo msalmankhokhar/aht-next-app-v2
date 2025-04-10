@@ -4,53 +4,42 @@ import BookingProcessItem from "@/components/BookingProcessItem";
 import Footer from "@/components/Footer";
 import HotelCard from "@/components/HotelCard";
 import Navbar from "@/components/Navbar";
-import PackageCard from "@/components/PackageCard";
-import QuoteForm from "@/components/QuoteForm";
 import FaqsSection from "@/components/sections/FaqsSection";
+import HomeHeroSection from "@/components/sections/Hero/HomeHeroSection";
 import StatsSection from "@/components/sections/StatsSection";
 import Topbar from "@/components/Topbar";
 import WhatsIncludedCard from "@/components/WhatsIncludedCard";
 import Head from "next/head";
 import Image from "next/image";
 import { LuBed, LuBus, LuChevronRight, LuIdCard } from "react-icons/lu";
+import { getYear } from "@/lib/utils";
+import PackagesSectionMain from "@/components/sections/Packages/PackagesSectionMain";
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Best Umrah Package 2025 - Umrah Travel Agency</title>
+        <title>Best Umrah Package {getYear()} - Umrah Travel Agency</title>
         <meta name="description" content="Book Your Umrah Package in UK with AL Habib Travel,  We have all inclusive packages for you next umrah journey. We brings exclusive Umrah deals including flights, hotels, visa etc." />
       </Head>
-      <header className="max-w-cont relative bg-gradient-to-b from-brand-secondary-900 via-brand-secondary-800 to-transparent overflow-hidden">
+
+      <header className="relative bg-gradient-to-b from-brand-secondary-900 via-brand-secondary-800 to-brand-secondary-600/30 overflow-hidden">
         <video src="/videos/header-video.mp4" autoPlay loop muted className="z-[0] opacity-10 absolute top-0 left-0 w-full h-full object-cover"></video>
         <Topbar />
         <Navbar variant="navbar-transparent" />
 
         {/* Hero Section */}
-        <section className="backdrop-blur-[0px] py-10 z-[1] relative px-cont flex items-center">
-          {/* Hero Section Content */}
-          <div className="w-full flex gap-8 justify-between">
-            {/* Left Side */}
-            <div className="min-w-1/2">
-              <h1 className="text-5xl/16 font-bold text-white tracking-wide leading-tight mb-6">All Inclusive <span className="text-brand-primary">Umrah <br /> Packages</span> <br /> with Guided Tour.</h1>
-              <p className="text-white font-light leading-relaxed tracking-wide text-lg">
-                Our all packages include flights, visa processing, <br />
-                accommodation near Haram, ground transport, <br />
-                and a guided tour. Meals are optional.
-              </p>
-            </div>
-            {/* Right Side Form */}
-            <QuoteForm />
-          </div>
-        </section>
-        <div className="absolute h-[150px] bottom-0 left-0 right-0 bg-gradient-to-b from-transparent to-white"></div>
+        <HomeHeroSection />
+
+        {/* div for creating boundaries merge effect */}
+        {/* <div className="absolute h-[150px] bottom-0 left-0 right-0 bg-gradient-to-b from-transparent to-white"></div> */}
       </header>
 
-      <main className="max-w-cont">
+      <main>
 
         {/* Whats Included Section */}
         <section className="px-cont py-24">
-          <h1 className="text-2xl mb-16 sm:text-4xl font-medium text-center text-brand-secondary">What&apos;s included in your <span className="py-2 bg-gradient-to-r from-transparent via-brand-primary-100 to-transparent">Umrah Package</span> ?</h1>
+          <h1 className="text-2xl mb-16 sm:text-4xl font-bold text-center text-brand-secondary">What&apos;s included in your Umrah Package ?</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-7 mt-7">
             <WhatsIncludedCard />
             <WhatsIncludedCard
@@ -71,17 +60,20 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Packages Section */}
+        <PackagesSectionMain />
+
         <section className="text-block text-block-theme-dark">
           <div>
             <h1>Umrah Packages: Experience a Spiritually Rewarding Umrah Journey</h1>
             <p>
-              Embark on your sacred pilgrimage with Al Habib Travel, a leading Umrah travel agency in the UK, offering the best packages. So whether you are planning on undertaking an Umrah from the UK in 2025 or preparing for that beautiful pilgrimage with one of the affordable package options for Umrah from the UK, we can provide tailored assistance to make it all easy for you to prepare for a hassle-free and spiritually rewarding journey. With our exclusive <strong>Umrah packages 2025</strong> for <strong>London</strong> and other cities in the UK, every pilgrim receives an intended hassle-free experience.
+              Embark on your sacred pilgrimage with Al Habib Travel, a leading Umrah travel agency in the UK, offering the best packages. So whether you are planning on undertaking an Umrah from the UK in {getYear()} or preparing for that beautiful pilgrimage with one of the affordable package options for Umrah from the UK, we can provide tailored assistance to make it all easy for you to prepare for a hassle-free and spiritually rewarding journey. With our exclusive <strong>Umrah packages {getYear()}</strong> for <strong>London</strong> and other cities in the UK, every pilgrim receives an intended hassle-free experience.
             </p>
           </div>
           <div>
-            <h1>Exclusive Discounts on Umrah Packages 2025</h1>
+            <h1>Exclusive Discounts on Umrah Packages {getYear()}</h1>
             <p>
-              At Al Habib Travel, we understand how important it is for Umrah to be a holy ritual, accessible to everyone. Therefore, we provide discounted prices on <strong>Umrah Packages UK</strong>. Be it single, family or group travel, this is what you will receive from our dedicated special offer <strong>Umrah Packages 2025</strong>. So, if you are planning to travel to the UK for Umrah, book an early flight and save on costs to enjoy a speedy, stress-free <strong>Umrah tour from the UK</strong>.
+              At Al Habib Travel, we understand how important it is for Umrah to be a holy ritual, accessible to everyone. Therefore, we provide discounted prices on <strong>Umrah Packages UK</strong>. Be it single, family or group travel, this is what you will receive from our dedicated special offer <strong>Umrah Packages {getYear()}</strong>. So, if you are planning to travel to the UK for Umrah, book an early flight and save on costs to enjoy a speedy, stress-free <strong>Umrah tour from the UK</strong>.
             </p>
           </div>
         </section>
@@ -89,8 +81,8 @@ export default function Home() {
         {/* Our Accomodation Section */}
         <section className="relative px-cont pt-16 pb-10 bg-gradient-to-br from-brand-secondary-900 via-brand-secondary-600 to-brand-secondary">
           <BgPattern />
-          <h1 className="text-2xl sm:text-4xl mb-5 font-medium text-center text-white">Our <span className="py-2 bg-gradient-to-r from-transparent via-brand-secondary to-transparent">Accomodation</span></h1>
-          <p className="text-center text-lg text-brand-primary-400 mb-10">Stay near the haram</p>
+          <h1 className="text-2xl mb-4 sm:text-4xl font-bold text-center text-white">Our Accomodation</h1>
+          <p className="text-center font-medium text-xl text-brand-secondary-200 mb-10">Stay near the haram</p>
           {/* Section Content */}
           <div>
             <div className="flex items-center justify-between">
@@ -126,7 +118,7 @@ export default function Home() {
           <div></div>
         </section>
 
-        <section className="text-block text-block-theme-light">
+        {/* <section className="text-block text-block-theme-light">
           <h1>Why Choose Al Habib Travel for Your Umrah?</h1>
           <p>
             Choosing Al Habib Travel as your Umrah package provider assures you of getting the best services, the most affordable invoices, and a stress-free pilgrimage. Sacred to your emotions and spirit, Umrah is desired to be truly a smooth, convenient, and enriching one; thus, we live by our commitments. Here is why pilgrims from the UK opt for Al Habib Travel for their Umrah trip:
@@ -135,7 +127,7 @@ export default function Home() {
             <li>
               <h2 className="inline">Affordable Packages - </h2>
               <p className="inline">
-                Reasonably priced to meet the diverse needs of customers while ensuring quality services, our various <strong>Umrah packages for 2025</strong> according to the months will be available for you. We maintain the lowest prices without compromising on essential services. Our affordable rates will not cause you to hesitate or second-guess choosing an expensive Umrah tour. You will receive all the facilities at a fair price.
+                Reasonably priced to meet the diverse needs of customers while ensuring quality services, our various <strong>Umrah packages for {getYear()}</strong> according to the months will be available for you. We maintain the lowest prices without compromising on essential services. Our affordable rates will not cause you to hesitate or second-guess choosing an expensive Umrah tour. You will receive all the facilities at a fair price.
               </p>
             </li>
             <li>
@@ -193,11 +185,11 @@ export default function Home() {
               </p>
             </li>
           </ul>
-        </section>
+        </section> */}
 
         {/* Booking Process Section */}
         <section className="px-cont py-20">
-          <h1 className="text-2xl sm:text-4xl font-medium text-center text-brand-secondary">Our <span className="py-2 bg-gradient-to-r from-transparent via-brand-primary/20 to-transparent">Booking Process</span></h1>
+        <h1 className="text-2xl mb-16 sm:text-4xl font-bold text-center text-brand-secondary">Booking Process</h1>
           {/* Section Content */}
           <div className="flex flex-wrap gap-5 w-full items-center justify-center mt-16">
 
@@ -244,22 +236,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Packages Section */}
-        <section className="relative py-20 px-cont bg-gray-100">
-          <h1 className="text-2xl sm:text-4xl font-medium text-center">Popular <span className="py-2 bg-gradient-to-r from-transparent via-brand-primary/20 to-transparent">Umrah Packages 2025</span></h1>
-          {/* section content */}
-          <div className="flex flex-wrap items-center relative z-[1] justify-center gap-8 mt-10">
-            <PackageCard />
-            <PackageCard />
-            <PackageCard />
-            <PackageCard />
-          </div>
-        </section>
-
         <section className="text-block text-block-theme-dark">
           <h1>Umrah Package Types Offered by Al Habib Travel</h1>
           <p>
-            To meet the diverse needs and preferences of pilgrims, Al Habib Travel provides a wide selection of Umrah packages for various budgets and travel requirements. Al Habib will present some of the best Umrah Packages 2025, allowing you to decide which best suits your priorities.
+            To meet the diverse needs and preferences of pilgrims, Al Habib Travel provides a wide selection of Umrah packages for various budgets and travel requirements. Al Habib will present some of the best Umrah Packages {getYear()}, allowing you to decide which best suits your priorities.
           </p>
           <ul>
             <li>
@@ -296,7 +276,7 @@ export default function Home() {
         </section>
 
         <section className="py-20 px-cont">
-          <h1 className="text-2xl sm:text-4xl font-medium text-center text-brand-secondary">Why Al Habib Travel?</h1>
+        <h1 className="text-2xl mb-16 sm:text-4xl font-bold text-center text-brand-secondary">Why Al Habib Travel?</h1>
           <div className="space-y-10 py-10">
 
             <div className="grid grid-cols-1 md:grid-cols-[450px_500px] justify-center">
@@ -527,11 +507,11 @@ export default function Home() {
             },
             {
               question: 'Which month is Umrah cheap?',
-              answer: 'The cheapest months for Umrah are traditionally in the months following the Hajj season, typically in the time frame between Muharram and Rajab. Therefore, the 2025 London Umrah packages include affordable options within this time frame. If you are visiting during this period you will receive a cheap package compared to other months. So, choose accordingly keeping in mind the month you feel will be suitable for your time.'
+              answer: 'The cheapest months for Umrah are traditionally in the months following the Hajj season, typically in the time frame between Muharram and Rajab. Therefore, the {getYear()} London Umrah packages include affordable options within this time frame. If you are visiting during this period you will receive a cheap package compared to other months. So, choose accordingly keeping in mind the month you feel will be suitable for your time.'
             },
             {
               question: 'What is the cost of the Umrah package from UK?',
-              answer: 'The starting price of a typical <strong>Umrah package from UK</strong> in 2025 is <strong>£730</strong>, while a luxury five-star Umrah package may constitute a person-to-person cost of  <strong>£1700</strong>. Each package has a different price range If you can afford it, then you can choose the luxury package for your comfort and safety.'
+              answer: 'The starting price of a typical <strong>Umrah package from UK</strong> in {getYear()} is <strong>£730</strong>, while a luxury five-star Umrah package may constitute a person-to-person cost of  <strong>£1700</strong>. Each package has a different price range If you can afford it, then you can choose the luxury package for your comfort and safety.'
             },
             {
               question: 'Which month is best for Umrah?',
