@@ -67,7 +67,7 @@
   @apply btn bg-brand-secondary hover:bg-brand-secondary-600 text-white
 }
 @utility btn-primary-white {
-  @apply btn bg-white text-brand-primary-600/90
+  @apply btn bg-white border border-gray-200 text-brand-primary-600/90
 }
 @utility btn-secondary-white {
   @apply btn bg-white text-brand-secondary hover:bg-brand-secondary hover:text-white

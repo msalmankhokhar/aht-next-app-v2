@@ -13,7 +13,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { LuBed, LuBus, LuChevronRight, LuIdCard } from "react-icons/lu";
 import { getYear } from "@/lib/utils";
-import PackagesSectionMain from "@/components/sections/Packages/PackagesSectionMain";
+import PackagesSectionMain from "@/components/sections/PackagesSectionMain";
 
 export default function Home() {
   return (

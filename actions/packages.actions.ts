@@ -1,5 +1,5 @@
 "use server";
-import axios from "axios";
+import { axiosClient } from "@/lib/utils";
 
 interface actionResponse {
     success: boolean,
@@ -12,13 +12,13 @@ export interface packageInterface {
     _id: string,
     title: string,
     purpose: string,
-    category: number,
+    category: string,
     labels: string[],
     makkahNights: number,
     madinahNights: number,
     price: number,
-    makkahHotel: {name: string},
-    madinahHotel: {name: string},
+    makkahHotel: { name: string },
+    madinahHotel: { name: string },
     inclusions: string[],
     exclusions: string[],
     accomType: string,
@@ -31,21 +31,33 @@ export interface packagesActionResponse extends actionResponse {
     },
 }
 
-export async function getPackages( {category= 'all'}: { category:'all' | 'Popular' | 'Economy' } ) : Promise<packagesActionResponse> {
+interface db_query_Interface {
+    category?: string,
+    purpose?: string,
+    price?: number,
+    makkahNights?: number,
+    madinahNights?: number,
+    rating?: number,
+}
+
+export async function getPackages(db_query?: db_query_Interface, limit?: number): Promise<packagesActionResponse> {
     // Fetch packages from the backend API
     try {
-        const response = await axios.get(`/packages/${category}`, {baseURL: process.env.BACKEND_URL});
+        const response = await axiosClient.get("/packages", {
+            data: { db_query, limit }
+        });
+        
         return {
             success: true,
             message: "Packages fetched successfully",
             data: response.data
-        }
-    } catch (error: Error | unknown) {
+        };
+    } catch (error: unknown) {
         console.error("Error fetching packages:", error);
         return {
             success: false,
             message: "Error fetching packages",
             error: error instanceof Error ? error.message : "Unknown error"
-        }
+        };
     }
 }
