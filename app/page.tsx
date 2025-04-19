@@ -15,7 +15,7 @@ import { LuBed, LuBus, LuChevronRight, LuIdCard } from "react-icons/lu";
 import { getYear } from "@/lib/utils";
 import PackagesSectionMain from "@/components/sections/PackagesSectionMain";
 
-export default function Home() {
+export default async function Home() {
   return (
     <>
       <Head>
@@ -61,7 +61,7 @@ export default function Home() {
         </section>
 
         {/* Packages Section */}
-        <PackagesSectionMain />
+        {(<PackagesSectionMain />)}
 
         <section className="text-block text-block-theme-dark">
           <div>
@@ -98,7 +98,7 @@ export default function Home() {
                 <button className="p-2 px-3 text-sm rounded-sm text-white">3 Star</button>
               </div>
             </div>
-            <div className="mt-7 flex gap-5 items-center justify-center">
+            <div className="mt-7 flex flex-wrap gap-5 items-center justify-center">
 
               <HotelCard
                 name="Swissotel Makkah"

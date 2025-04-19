@@ -9,10 +9,10 @@ interface FaqsSectionProps {
 export default function FaqsSection({faqs}: FaqsSectionProps) {
     return (
         <section className="px-cont py-20">
-            <h1 className="text-2xl sm:text-4xl font-medium text-center text-brand-secondary mb-16">Frequently Asked <span className="py-2 bg-gradient-to-r from-transparent via-brand-primary/20 to-transparent">Questions</span></h1>
+            <h1 className="text-2xl sm:text-4xl font-bold text-center text-brand-secondary mb-16">Frequently Asked Questions</h1>
             {/* Section Content */}
-            <div className="flex gap-5 w-full">
-                <div className="flex-1 self-start border-l border-r border-b border-gray-300">
+            <div className="flex flex-col flex-wrap gap-5">
+                <div className="border-l border-r border-b border-gray-300">
                     {
                         faqs?.map((faq, index) => (
                             <Faq
@@ -23,7 +23,7 @@ export default function FaqsSection({faqs}: FaqsSectionProps) {
                         ))
                     }
                 </div>
-                <div className="self-start w-full max-w-[450px] px-7 sm:px-10 py-10 rounded-xl bg-brand-secondary-400 flex flex-col gap-5 items-center">
+                <div className="self-start px-7 sm:px-10 py-10 rounded-xl bg-brand-secondary-400 flex flex-col gap-5 items-center">
                     <div className="size-[65px] rounded-full bg-white flex items-center justify-center">
                         <LuPhone size={24} className="text-brand-secondary-400" />
                     </div>

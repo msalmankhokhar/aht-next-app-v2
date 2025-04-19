@@ -6,11 +6,11 @@ export default function Footer() {
         <>
             <footer className="bg-brand-secondary relative flex flex-col px-cont">
                 <BgPattern />
-                <div className="flex items-center justify-between pt-8 pb-5 border-b border-brand-secondary-300">
+                <div className="flex flex-col gap-5 justify-between pt-8 pb-5 border-b border-brand-secondary-300">
                     <div className="font-semibold text-white text-3xl">Let&apos;s <span className="text-brand-primary-400">Connect</span> there</div>
                     <button className="btn-primary-mixed">Call Now</button>
                 </div>
-                <div className="flex justify-between py-6">
+                <div className="flex flex-col justify-between py-6">
                     <div>
                         <h2 className="text-brand-primary-400 font-semibold text-lg mb-2">About Us</h2>
                         <p className="text-white tracking-wider max-w-[250px] text-sm">Al Habib Travel is the most trusted & reliable agency among UK Muslims. We provide bespoke Umrah travel solutions & package designing services to meet budget range and facilities requirements of pilgrims.</p>

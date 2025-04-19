@@ -13,7 +13,8 @@ export default function PackageCard({
     madinahHotel,
     inclusions}: packageInterface) {
     return (
-        <div className='p-0 min-w-[350px] w-full rounded-lg overflow-hidden shadow-md bg-white'>
+        // min-w-[350px]
+        <div className='p-0 w-full rounded-lg overflow-hidden shadow-md bg-white'>
             <div className='hidden relative w-full aspect-[16/7]'>
                 <Image
                     alt='umrah package thumbnail'
@@ -38,7 +39,7 @@ export default function PackageCard({
                         ))}
                     </ul>
                 </div>
-                <div className='flex gap-3 mt-3.5'>
+                <div className='flex flex-wrap gap-3 mt-3.5'>
                     <Link href={`/package/${_id}`} className='btn-primary-white flex-1 text-nowrap'>View Price</Link>
                     <Link href={`tel:`} className='btn-secondary-mixed flex-1 gap-2'>
                         <LuPhone size={18} />

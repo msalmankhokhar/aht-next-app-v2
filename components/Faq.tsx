@@ -16,14 +16,14 @@ export default function Faq({
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="border-t border-gray-300 max-w-[700px]">
+        <div className="border-t border-gray-300">
             <div
                 onClick={() => setIsOpen(!isOpen)}
                 className="cursor-pointer w-full p-6 flex items-center justify-between text-left"
             >
                 <div className="flex items-center gap-3">
                     <LuMessageCircleQuestion className="text-brand-secondary text-xl" />
-                    <h3 className="text-nowrap font-medium text-brand-secondary">{question}</h3>
+                    <h3 className="font-medium text-brand-secondary">{question}</h3>
                     <motion.div
                         animate={{ rotate: isOpen ? 180 : 0 }}
                         transition={{ duration: 0.2 }}
