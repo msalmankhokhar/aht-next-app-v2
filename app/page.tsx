@@ -19,11 +19,11 @@ export default async function Home() {
   return (
     <>
       <Head>
-        <title>Best Umrah Package {getYear()} - Umrah Travel Agency</title>
+        <title>Best Umrah Packages {getYear()} - Umrah Travel Agency</title>
         <meta name="description" content="Book Your Umrah Package in UK with AL Habib Travel,  We have all inclusive packages for you next umrah journey. We brings exclusive Umrah deals including flights, hotels, visa etc." />
       </Head>
 
-      <header className="relative bg-gradient-to-b from-brand-secondary-900 via-brand-secondary-800 to-brand-secondary-600/30 overflow-hidden">
+      <header className="relative bg-gradient-to-b from-brand-secondary-900 via-brand-secondary-700 to-brand-secondary-400 overflow-hidden">
         <video src="/videos/header-video.mp4" autoPlay loop muted className="z-[0] opacity-10 absolute top-0 left-0 w-full h-full object-cover"></video>
         <Topbar />
         <Navbar variant="navbar-transparent" />

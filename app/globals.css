@@ -58,16 +58,16 @@
 
 /* Buttons */
 @utility btn {
-  @apply py-3 px-6 font-bold rounded-sm transition-colors flex items-center justify-center cursor-pointer
+  @apply py-3 px-6 font-bold rounded-sm transition-colors duration-300 flex items-center justify-center cursor-pointer
 }
 @utility btn-primary {
-  @apply btn bg-brand-primary hover:bg-brand-primary-400 text-black
+  @apply btn bg-brand-primary-400 hover:bg-brand-primary-400/93 text-black
 }
 @utility btn-secondary {
   @apply btn bg-brand-secondary hover:bg-brand-secondary-600 text-white
 }
 @utility btn-primary-white {
-  @apply btn bg-white border border-gray-200 text-brand-primary-600/90
+  @apply btn bg-white border border-gray-200 text-brand-primary-600/90 hover:bg-brand-secondary-50/40
 }
 @utility btn-secondary-white {
   @apply btn bg-white text-brand-secondary hover:bg-brand-secondary hover:text-white

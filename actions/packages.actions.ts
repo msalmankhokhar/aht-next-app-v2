@@ -11,6 +11,7 @@ interface actionResponse {
 export interface packageInterface {
     _id: string,
     title: string,
+    rating: number,
     purpose: string,
     category: string,
     labels: string[],
@@ -40,7 +41,7 @@ interface db_query_Interface {
     rating?: number,
 }
 
-export async function getPackages(db_query?: db_query_Interface, limit?: number): Promise<packagesActionResponse> {
+export async function getPackages({ db_query, limit }:{ db_query?: db_query_Interface, limit?: number }): Promise<packagesActionResponse> {
     // Fetch packages from the backend API
     try {
         const response = await axiosClient.get("/packages", {

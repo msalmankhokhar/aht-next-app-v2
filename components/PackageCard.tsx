@@ -15,7 +15,7 @@ export default function PackageCard({
     return (
         // min-w-[350px]
         <div className='p-0 w-full rounded-lg overflow-hidden shadow-md bg-white'>
-            <div className='hidden relative w-full aspect-[16/7]'>
+            <div className='relative w-full aspect-[16/7]'>
                 <Image
                     alt='umrah package thumbnail'
                     className='object-cover object-bottom w-full h-full'
@@ -39,7 +39,7 @@ export default function PackageCard({
                         ))}
                     </ul>
                 </div>
-                <div className='flex flex-wrap gap-3 mt-3.5'>
+                <div className='flex flex-wrap md:flex-nowrap gap-3 mt-3.5'>
                     <Link href={`/package/${_id}`} className='btn-primary-white flex-1 text-nowrap'>View Price</Link>
                     <Link href={`tel:`} className='btn-secondary-mixed flex-1 gap-2'>
                         <LuPhone size={18} />

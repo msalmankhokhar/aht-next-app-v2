@@ -45,7 +45,7 @@ export default function Navbar({ variant = 'navbar-white' }: NavbarProps) {
       </div>
       
       <div className="hidden lg:flex items-center gap-4">
-        <button className="btn-secondary-white">Contact Us</button>
+        <button className={variant == 'navbar-transparent' ? `btn-secondary-white` : 'btn-secondary'}>Contact Us</button>
       </div>
       
       {/* Mobile menu button */}
